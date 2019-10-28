@@ -1,9 +1,9 @@
-#What is it
+# What is it
 
 This script for transfering groups of repos from one gitlab to another gitlab.
 
 
-#How to use
+# How to use
 
 You need to have ssh keys for both version control systems.
 
