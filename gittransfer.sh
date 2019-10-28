@@ -18,7 +18,7 @@ do
     echo $REPO_PATH
     git clone --bare git@$SRC_GIT:$REPO_PATH.git "$REPO_PATH" # && \
     cd $REPO_PATH && git remote add new-origin ssh://git@$DEST_GIT/$REPO_GROUP/$REPO_NAME.git && git push -u new-origin --all && \
-    echo $(pwd) && rm -rf ../../$REPO_GROUP && \
+    cd - && rm -rf $REPO_GROUP && \
     echo 'This repo transfered!'
   fi;
 done
