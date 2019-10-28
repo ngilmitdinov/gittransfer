@@ -8,7 +8,7 @@ PRIVATE_TOKEN='xxxxxxxxx_XXXXXXX' #you can get in admin area of source gitlab
 REPO_COUNT=100 #maybe greater
 SRC_GIT="srcgitlab.domain1.ru"
 DEST_GIT="destgitlab.domain2.net"
-REPO_GROUP="dotnet/"
+REPO_GROUP="dotnet"
 
 for i in $(curl --header "Private-Token: $PRIVATE_TOKEN"  "https://$SRC_GIT/api/v4/projects?page=1&per_page=$REPO_COUNT" |  python -m json.tool | grep path_with_namespace | awk '{print $2}' | sed 's|"||g' | sed 's|,||g')
 do
